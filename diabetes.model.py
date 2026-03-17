@@ -38,3 +38,4 @@ if result[0] == 1:
     print("\nResult: The model predicts this patient has diabetes.")
 else:
     print("\nResult: The model predicts this person doesn't have diabetes.")
+print("Maisha added this change")
