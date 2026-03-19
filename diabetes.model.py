@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix, classification_report
 
 # 1. Load the data
 df = pd.read_csv('diabetes.csv')
@@ -38,4 +39,16 @@ if result[0] == 1:
     print("\nResult: The model predicts this patient has diabetes.")
 else:
     print("\nResult: The model predicts this person doesn't have diabetes.")
-print("Maisha added this change")
+
+# -------------------------------
+# 8. EXTRA EVALUATION (by Maisha)
+# -------------------------------
+
+# Confusion Matrix shows correct and wrong predictions
+print("\nConfusion Matrix:")
+print(confusion_matrix(y_test, predictions))
+
+# Classification Report shows precision, recall, f1-score
+print("\nClassification Report:")
+print(classification_report(y_test, predictions))
+#Contribution by Maisha - added evaluation metrices
