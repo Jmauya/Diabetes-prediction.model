@@ -32,7 +32,7 @@ accuracy = accuracy_score(y_test, predictions)
 print(f"\nModel Accuracy: {accuracy * 100:.2f}%")
 
 # 8. Quick Prediction on a sample (Example patient data)
-sample_patient = [[1, 1, 1, 1, 0, 1, 1, 1]] // model was trained on 8 columns of data
+sample_patient = [[1, 1, 1, 1, 0, 1, 1, 1]]   // model was trained on 8 columns of data
 result = model.predict(sample_patient)
 
 if result[0] == 1:
